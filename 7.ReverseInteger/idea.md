@@ -14,6 +14,6 @@
 
 32位整数范围：-2147483648～2147483647
 常量：
-- python: *sys.max_int(9223372036854775807)*
-- java:*Integer.MAX_VALUE*, *Integer.MIN_VALUE*;
-- c++: *INT_MAX*, *INT_MIN*
+- **python**: *sys.max_int(9223372036854775807)*
+- **java**: *Integer.MAX_VALUE*, *Integer.MIN_VALUE*;
+- **c++**: *INT_MAX*, *INT_MIN*
