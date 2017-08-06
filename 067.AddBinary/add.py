@@ -9,7 +9,7 @@ class Solution(object):
         ib = len(b) - 1
         carry = 0
         res = ""
-        while ia > 0 or ib > 0 or carry:
+        while ia >= 0 or ib >= 0 or carry:
             va = 0
             vb = 0
             if ia >= 0:
@@ -27,4 +27,4 @@ class Solution(object):
         return res[::-1]
 
 if __name__ == '__main__':
-    print Solution().addBinary("11", "1")
+    print Solution().addBinary("0", "0")
