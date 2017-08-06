@@ -1,1 +1,4 @@
-http://www.forkosh.com/mathtex.cgi?\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+![](http://latex.codecogs.com/gif.latex?\\f(n)=\\f(n)=\\sum_{i=0}^{\\lfloor n / 2 \\rfloor}\\binom{i}{n-i})
+
+
+http://latex.codecogs.com/
