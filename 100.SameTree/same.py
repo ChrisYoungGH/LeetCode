@@ -12,16 +12,16 @@ class Solution(object):
         :type q: TreeNode
         :rtype: bool
         """
-        # 都为空节点，子树相等
+        # 1.都为空节点，子树相等
         if not p and not q:
             return True
-        # 不都为空节点，子树不相等
+        # 2.不都为空节点，子树不相等
         if not p or not q:
             return False
-        # 值不相等，子树不相等
+        # 3.值不相等，子树不相等
         if p.val != q.val:
             return False
-        # 左右子树相等才相等
+        # 4.左右子树相等才相等
         isSameLeft = isSameRight = True
         isSameLeft = self.isSameTree(p.left, q.left)
         isSameRight = self.isSameTree(p.right, q.right)
