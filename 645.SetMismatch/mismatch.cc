@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
-        int* counts = new int[nums.size()];
+        int counts[nums.size()] = {0};
         vector<int> ans;
         for (int n : nums) {
             counts[n-1]++;
