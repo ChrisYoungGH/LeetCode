@@ -9,8 +9,8 @@ public:
             int v2 = p2 >= 0 ? num2[p2--] - '0' : 0;
             int sum = v1 + v2 + up;
             up = sum / 10;
-            ans = sum % 10 + '0' + ans;
+            ans = char(sum % 10 + '0') + ans;
         }
-        return up > 0 ? up + ans : ans;
+        return up > 0 ? char(up + '0') + ans : ans;
     }
 };
