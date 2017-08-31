@@ -14,7 +14,7 @@ class Solution(object):
         """
         if not root:
             return 0
-            
+
         queue1 = deque([])
         queue2 = deque([])
 
@@ -33,3 +33,6 @@ class Solution(object):
                 queue2.append(currDepth + 1)
 
         return currDepth
+
+    def maxDepth2(self, root):
+        return 0 if not root else 1 + max(self.maxDepth2(root.left), self.maxDepth2(root.right))

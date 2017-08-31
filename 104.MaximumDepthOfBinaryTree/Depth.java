@@ -37,4 +37,8 @@ class Solution {
 
         return currDepth;
     }
+
+    public itn maxDepth2(TreeNode root) {
+        return root == null ? 0 : 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right));
+    }
 }

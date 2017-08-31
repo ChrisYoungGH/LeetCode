@@ -40,4 +40,8 @@ public:
 
         return depth;
     }
+
+    int maxDepth2(TreeNode* root) {
+        return !root ? 0 : 1 + max(maxDepth2(root->left), maxDepth2(root->right));
+    }
 };
