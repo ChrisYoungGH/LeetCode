@@ -20,9 +20,3 @@ class Solution(object):
         charArray[i:end] = charArray[end-1:(i-1 if i>0 else None):-1]
 
         return ''.join(charArray)
-
-
-if __name__ == '__main__':
-    s = 'abcd'
-    k = 3
-    print Solution().reverseStr(s, k)

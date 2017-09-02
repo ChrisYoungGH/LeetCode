@@ -5,32 +5,30 @@ class Solution {
         }
 
         int end = s.length() / (2*k) * (2*k);
-        char[] charArray = s.toCharArray();
 
+        StringBuffer sb = new StringBuffer();
         for (int i = 0; i < end; i += 2*k) {
-            for (int j = i; j < i + k; j++) {
-                int index = i + k - j - 1;
-                char tmp = charArray[j];
-                charArray[j] = charArray[index];
-                charArray[index] = tmp;
-            }
+            sb.append(reverse(s.substring(i, i+k))).append(s.substring(i+k, i+2*k));
         }
 
         int begin = end;
-        end = s.length() - begin < k ? begin : s.length() + k;
+        end = s.length() - begin > k ? begin + k : s.length();
 
-        for (int j = begin; j < (end - begin) / 2 + begin; j++) {
-            int index = (end - begin) / 2 + begin - j - 1;
-            char tmp = charArray[j];
-            charArray[j] = charArray[index];
-            charArray[index] = tmp;
+        sb.append(reverse(s.substring(begin, end)));
+
+        if (end < s.length()) {
+            sb.append(s.substring(end, s.length()));
         }
 
-        StringBuilder sb = new StringBuilder();
-        for (char c : charArray) {
-            sb.append(c);
-        }
+        return sb.toString();
+    }
 
+    public String reverse(String s) {
+        char[] s_char = s.toCharArray();
+        StringBuffer sb = new StringBuffer();
+        for (int i = s_char.length-1; i >= 0; i--) {
+            sb.append(s_char[i]);
+        }
         return sb.toString();
     }
 }
