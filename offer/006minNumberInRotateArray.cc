@@ -19,7 +19,7 @@ public:
             else if (rotateArray[mid] > rotateArray[l]) {
                 l = mid;
             }
-        	    else {
+    	    else {
                 if (rotateArray[mid] < rotateArray[r]) {
                     r = mid;		
                 }
