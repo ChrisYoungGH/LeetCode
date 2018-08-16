@@ -1,0 +1,6 @@
+- 考虑底数为0的情况
+- 分别讨论n=0, n=1, n<0, n>1.
+- 负数相当于1.0 / pow(x, -n). 但注意不能直接用-n计算, 可能会溢出. 方法是使用unsigned int, 先计算unsigned int类型的-n.
+- 为此需要一个辅助函数pow(double x, unsigned int n);
+- 计算相反数的方法是按位取整再加1: (n ^ 0xffffffff) + 1. 注意加括号保证运算顺序. 或者直接unsigned int(-n).
+- 二分.
